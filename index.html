@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SPA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="placement">
+                <li><a class = "button" href="#home">Главная</a></li>
+                <li><a class = "button" href="#about">О нас</a></li>
+                <li><a class = "button" href="#reviews">Отзывы</a></li>
+                <li><a class = "button" href="#register">Регистрация</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main id="app">
+        <section id="course-block">
+            <div id="image-frame">
+                <img id="cource-image" src="/img/cource.jpg" alt="cousce image">
+            </div>
+            <h1>Веб разработка - мы видим в вас потенциал</h1>
+            <p>Станьте профессиональным разработчиком</p>
+            <div class="text-place">
+                <p>Какой то воодушевленный текст рекламы</p>
+
+                <h3>Специально для вас! Всего за: <b>большая сумма, но не супер огромная</b></h3>
+                <p>Вместо: <s>какая то заоблачная</s></p>
+                <p class="scam">супер мелким шрифтом пишем что акция всего на первый месяц занятий</p>
+            </div>
+
+            <a href="#register" class="button">Записаться!</a>
+        </section>
+
+
+        <section id="about-block">
+            <h2> О курсе</h2>
+            <p>Это курс для тех кто хочет учиться с полного нуля!</p>
+            <ul>
+                <li><strong>Темы: </strong>HTML, CSS, JavaScript, .NET и C#, Python Core, Сетевое программирование, C++,
+                    SQL, Менеджмент даних з використанням EF Core, Dapper, </li>
+                <li><strong>Длительность: </strong>1 год</li>
+                <li><strong>Преподаватель: </strong> Александра Тернова, педагог со стажем 6 лет</li>
+            </ul>
+        </section>
+        <!-- https://symbl.cc/ru/2B50/ -->
+        <section id="reviews-block">
+            <h2>Отзывы студентов</h2>
+            <div class="card">
+                <b>Маша П.</b><span>⭐⭐⭐⭐</span>
+                <p>"Отличный курс! Работу пока не нашла!"</p>
+            </div>
+            <div class="card">
+                <b>Даша С.</b><span>⭐⭐⭐⭐⭐</span>
+                <p>"Курс норм. Уже работаю."</p>
+            </div>
+            <div class="card">
+                <b>Олег З.</b><span>⭐</span>
+                <p>"Не допустили на экзамен."</p>
+            </div>
+        </section>
+        <section id="register-block">
+            <h2>Регистрация</h2>
+<form id="registrationForm">
+                <label for="name">Имя:</label>
+                <input type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Введите ваше имя" 
+                required>
+
+                <label for="email">Email:</label>
+                <input type="email" 
+                id="email" name="email" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                placeholder="example@mail.com" 
+                required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" 
+                id="phone" name="phone" 
+                pattern="^\+380\d{9}$" 
+                placeholder="+380..." 
+                title="Формат: +380XXXXXXXXX (без пробелов и скобок)" 
+                value="+380" 
+                required>
+
+                <button type="submit" class="button">Отправить</button>
+            </form>
+        </section>
+
+        <section id="thanks-block">
+            <h2>Спасибо за регистрацию!</h2>
+            <p>Мы получили вашу заявку. Мы обязательно вам не позвоним!.</p>
+            
+            <h3>Ваши данные:</h3>
+            <div class="card line">
+                <p><strong>Имя:</strong> <span id="display-name"></span></p>
+                <p><strong>Email:</strong> <span id="display-email"></span></p>
+                <p><strong>Телефон:</strong> <span id="display-phone"></span></p>
+            </div>
+            
+            <a href="#course" class="button">Вернуться на главную</a>
+        </section>
+
+    </main>
+</body>
