@@ -7,6 +7,8 @@
 
     <title>SPA</title>
     <link rel="stylesheet" href="style.css">
+    <script src="PageNavigate.js" defer></script>
+    <script src="RegistrationForm.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -24,8 +26,8 @@
     </header>
     <main id="app">
         <section id="home">
-            <div id="image-frame">
-                <img id="cource-image" src="./img/cource.jpg" alt="cousce image">
+            <div class="image-frame">
+                <img class="cource-image" src="./img/cource.jpg" alt="cousce image">
             </div>
             <h1>Веб разработка - мы видим в вас потенциал</h1>
             <p>Станьте профессиональным разработчиком</p>
@@ -57,17 +59,33 @@
         <!-- https://symbl.cc/ru/2B50/ -->
         <section id="reviews">
             <h2>Отзывы студентов</h2>
+
+
             <div class="card">
-                <b>Маша П.</b><span>⭐⭐⭐⭐</span>
+                <div class="image-frame-small">
+                    <img class="user-image" src="./img/userpict/user1.jpg" alt="user">
+                    <div class="user-info"> <b>Маша П.</b>
+                        <div class="stars-small">⭐⭐⭐⭐</div>
+                    </div>
+                </div>
                 <p>"Отличный курс! Работу пока не нашла!"</p>
             </div>
             <div class="card">
-                <b>Даша С.</b><span>⭐⭐⭐⭐⭐</span>
-                <p>"Курс норм. Уже работаю."</p>
-            </div>
-            <div class="card">
-                <b>Олег З.</b><span>⭐</span>
-                <p>"Не допустили на экзамен."</p>
+                <div class="image-frame-small">
+                    <img class="user-image" src="./img/userpict/user2.jpg" alt="user">
+                    <div class="user-info"> <b>Даша С.</b>
+                        <div class="stars-small">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <p>"Норм. Работаю"</p>
+            </div>            <div class="card">
+                <div class="image-frame-small">
+                    <img class="user-image" src="./img/userpict/user3.jpg" alt="user">
+                    <div class="user-info"> <b>Олег Г.</b>
+                        <div class="stars-small">⭐</div>
+                    </div>
+                </div>
+                <p>"Курс отстой. Не допустили к экзамену за пропуски"</p>
             </div>
         </section>
         <section id="register">
@@ -77,12 +95,12 @@
                 <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="example@mail.com" required>
+                <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    placeholder="example@mail.com" required>
 
                 <label for="phone">Телефон:</label>
-                <input type="tel" id="phone" name="phone" pattern="^\+380\d{9}$"
-                    placeholder="+380..." title="Формат: +380XXXXXXXXX (без пробелов и скобок)" value="+380" required>
+                <input type="tel" id="phone" name="phone" pattern="^\+380\d{9}$" placeholder="+380..."
+                    title="Формат: +380XXXXXXXXX (без пробелов и скобок)" value="+380" required>
 
                 <button type="submit" class="button">Отправить</button>
             </form>
